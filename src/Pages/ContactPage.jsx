@@ -4,7 +4,8 @@ import { db } from "../firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 import {
-  Mail
+  Mail,
+  MessageCircle
 } from "lucide-react";
 
 import FadeIn from "../Components/FadeIn";
@@ -68,35 +69,84 @@ export default function ContactPage() {
   <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
 
     {/* LEFT SIDE — PROJECT COMMITTEE DETAILS */}
-    <FadeIn delay={200}>
-      <div className="h-full flex flex-col gap-8">
+<FadeIn delay={200}>
+  <div className="h-full flex flex-col gap-8">
 
-        {/* Committee Members */}
-        <div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-8">
-            Project Committee
-          </h3>
+    {/* Committee Members */}
+    <div>
+      <h3 className="text-2xl font-bold text-gray-900 mb-8">
+        Project Committee
+      </h3>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {[
-              ["Osanda Lakshan", "Co-Chair", "076 144 6604"],
-              ["Janagan Thiruchelvam", "LB Lead", "070 530 0007"],
-              ["Nimesha Herath", "Co-Director", "076 774 3665"],
-              ["Minoja Weerasinghe", "Co-Director", "074 023 5792"],
-            ].map(([name, role, phone], i) => (
-              <div
-                key={i}
-                className="bg-orange-50 p-4 rounded-xl border border-orange-100 hover:shadow-md transition-all"
-              >
-                <h4 className="font-bold text-gray-900">{name}</h4>
-                <p className="text-orange-600 text-sm font-bold">{role}</p>
-                <p className="text-gray-600 text-sm mt-1">{phone}</p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+        {[
+          { name: "Osanda Lakshan", role: "Co-Chair", phone: "076 144 6604", img: "/committee/osanda.jpg" },
+          { name: "Paboda Kausali", role: "Co-Chair", phone: "078 817 5271", img: "/committee/paboda.jpg" },
+          { name: "Madhushi Wathsala", role: "Co-Chair", phone: "075 422 6247", img: "/committee/madhushi.jpg" },
+          { name: "Janagan Thiruchelvam", role: "LB Lead", phone: "070 530 0007", img: "/committee/janagan.jpg" },
+          { name: "Nimesha Herath", role: "Co-Director", phone: "076 774 3665", img: "/committee/nimesha.jpg" },
+          { name: "Minoja Weerasinghe", role: "Co-Director", phone: "074 023 5792", img: "/committee/minoja.jpg" },
+        ].map((member, i) => (
+          <div
+            key={i}
+            className="
+              group bg-orange-50 p-4 rounded-xl border border-orange-200 
+              shadow-sm hover:shadow-xl transition-all duration-300 
+              hover:-translate-y-2 relative overflow-hidden
+            "
+          >
+            {/* Glow effect */}
+            <div
+              className="
+                absolute inset-0 opacity-0 group-hover:opacity-100 
+                bg-gradient-to-br from-orange-200 via-white to-amber-100 
+                blur-xl transition-opacity duration-500 pointer-events-none
+              "
+            />
+
+            {/* Content */}
+            <div className="relative z-10">
+
+              {/* Photo */}
+              <div className="w-20 h-20 rounded-xl overflow-hidden shadow-md border border-orange-100 mb-3">
+                <img
+                  src={member.img}
+                  alt={member.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
-            ))}
-          </div>
-        </div>
 
-        {/* Email Card */}
+              <h4 className="font-bold text-gray-900">{member.name}</h4>
+              <p className="text-orange-600 text-sm font-bold">{member.role}</p>
+              <p className="text-gray-600 text-sm mt-1">{member.phone}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</FadeIn>
+
+
+        
+
+        {/* Map */}
+        <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-200 h-94 w-full">
+          <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.2212177506017!2d79.91609007497121!3d6.973360818273482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae257d62d5851e3%3A0x804d79669481532a!2sUniversity%20of%20Kelaniya!5e0!3m2!1sen!2slk!4v1709229999999!5m2!1sen!2slk"
+  width="100%"
+  height="100%"
+  style={{ border: 0 }}
+  allowFullScreen=""
+  loading="lazy"
+  title="University of Kelaniya"
+/>
+
+        </div>
+      </div>
+    {/* Email Card */}
         <div className="flex items-start gap-4 bg-gray-50 p-6 rounded-2xl border border-gray-100">
           <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-orange-600 shrink-0 shadow-sm">
             <Mail size={24} />
@@ -114,21 +164,20 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* Map */}
-        <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-200 h-64 w-full">
-          <iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.2212177506017!2d79.91609007497121!3d6.973360818273482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae257d62d5851e3%3A0x804d79669481532a!2sUniversity%20of%20Kelaniya!5e0!3m2!1sen!2slk!4v1709229999999!5m2!1sen!2slk"
-  width="100%"
-  height="100%"
-  style={{ border: 0 }}
-  allowFullScreen=""
-  loading="lazy"
-  title="University of Kelaniya"
-/>
-
-        </div>
+        {/* WhatsApp Card */}
+        <div className="flex items-start gap-4 bg-gray-50 p-6 rounded-2xl border border-gray-100">
+      <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-green-600 shadow-sm">
+        <MessageCircle size={24} />
       </div>
-    </FadeIn>
+      <div>
+        <h4 className="font-bold text-gray-900 text-lg">WhatsApp Us</h4>
+        <p className="text-gray-600 mt-1 font-semibold">
+          <a href="https://wa.me/94767743665" className="hover:text-green-600">
+            +94 76 774 3665
+          </a>
+        </p>
+      </div>
+    </div>
 
     {/* RIGHT SIDE — PARTNERSHIP INQUIRY FORM (Matches screenshot perfectly) */}
     <FadeIn>
@@ -240,10 +289,12 @@ export default function ContactPage() {
 
       </div>
     </FadeIn>
-  </div>
+  
+
 </section>
 
-{/* SUPPORT OUR CAUSE SECTION */}
+    {/* ---------------- SUPPORT OUR CAUSE SECTION ---------------- */}
+{ /* SUPPORT OUR CAUSE SECTION */}
 <section className="py-20 mt-10 bg-gradient-to-b from-orange-50 to-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     

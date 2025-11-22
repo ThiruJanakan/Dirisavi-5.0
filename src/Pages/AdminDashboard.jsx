@@ -58,35 +58,41 @@ export default function AdminDashboard() {
       </div>
 
       {/* Partnership Table */}
-      <div className="bg-white p-6 rounded-2xl shadow-xl border border-gray-200 mb-10">
-        <h2 className="text-2xl font-bold mb-4 text-orange-600">
-          Partnership Inquiries
-        </h2>
+      {/* Partnership Table */}
+<div className="bg-white p-6 rounded-2xl shadow-xl border border-gray-200 mb-10">
+  <h2 className="text-2xl font-bold mb-4 text-orange-600">
+    Partnership Inquiries
+  </h2>
 
-        <table className="w-full border">
-          <thead>
-            <tr className="bg-gray-900 text-white">
-              <th className="p-3">Organization</th>
-              <th className="p-3">Contact</th>
-              <th className="p-3">Email</th>
-              <th className="p-3">Phone</th>
-              <th className="p-3">Package</th>
-            </tr>
-          </thead>
+  <table className="w-full border">
+    <thead>
+      <tr className="bg-gray-900 text-white">
+        <th className="p-3">Organization</th>
+        <th className="p-3">Contact</th>
+        <th className="p-3">Email</th>
+        <th className="p-3">Phone</th>
+        <th className="p-3">Package</th>
+        <th className="p-3">Additional Info</th> {/* ★ NEW COLUMN */}
+      </tr>
+    </thead>
 
-          <tbody>
-            {partnerships.map((p) => (
-              <tr key={p.id} className="border text-center">
-                <td className="p-3">{p.organizationName}</td>
-                <td className="p-3">{p.contactPerson}</td>
-                <td className="p-3">{p.email}</td>
-                <td className="p-3">{p.phone}</td>
-                <td className="p-3 capitalize">{p.package}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+    <tbody>
+      {partnerships.map((p) => (
+        <tr key={p.id} className="border text-center">
+          <td className="p-3">{p.organizationName}</td>
+          <td className="p-3">{p.contactPerson}</td>
+          <td className="p-3">{p.email}</td>
+          <td className="p-3">{p.phone}</td>
+          <td className="p-3 capitalize">{p.package}</td>
+          <td className="p-3 text-sm text-gray-700">
+            {p.additionalInfo || "—"} {/* Shows dash if empty */}
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
 
       {/* Catalyst Requests */}
       <div className="bg-white p-6 rounded-2xl shadow-xl border border-gray-200">
