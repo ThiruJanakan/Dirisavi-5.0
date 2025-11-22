@@ -15,10 +15,11 @@ const HomePage = ({ navigateTo, toggleChat }) => (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1588258524675-c6b03f97f844?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+          src="/images/home-banner.jpg" 
           alt="Sri Lankan Rural Life"
           className="w-full h-full object-cover object-center"
         />
+        
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/30"></div>
       </div>
 
@@ -100,7 +101,7 @@ const HomePage = ({ navigateTo, toggleChat }) => (
           <FadeIn delay={200}>
             <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl group">
               <img
-                src="https://images.unsplash.com/photo-1544253461-85d675255257?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                src="/images/field-visit.jpg" 
                 alt="Field Visit Of Dirisavi 5.0"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />

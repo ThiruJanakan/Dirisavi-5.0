@@ -81,7 +81,7 @@ const AboutPage = () => (
             {/* Replace this image by adding /public/dirisavi-5-hero.jpg */}
             <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-orange-200 via-amber-100 to-white opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 pointer-events-none" />
             <img
-              src="/dirisavi-5-hero.jpg"
+              src="/images/Dirisavi5.0-banner.jpg" 
               alt="Dirisavi 5.0 project visual"
               className="relative w-full h-[360px] md:h-[420px] object-cover rounded-3xl shadow-2xl border border-orange-100 transform group-hover:-translate-y-2 group-hover:rotate-1 transition-transform duration-500"
             />
@@ -120,7 +120,7 @@ const AboutPage = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <FadeIn>
           <img
-            src="https://images.unsplash.com/photo-1620619767323-b95a89183081?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+            src="/images/dirisavi-legecy.jpg" 
             alt="Sri Lankan Villagers"
             className="rounded-2xl shadow-2xl w-full h-[400px] object-cover transform hover:-translate-y-2 hover:shadow-[0_25px_60px_rgba(251,146,60,0.4)] transition-all duration-500"
           />
@@ -177,7 +177,7 @@ const AboutPage = () => (
               {/* Replace this with /public/leo-uok-group.jpg */}
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-emerald-200 via-white to-amber-100 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 pointer-events-none" />
               <img
-                src="/leo-uok-group.jpg"
+                src="/leo-fam.jpg"
                 alt="Leo Club of University of Kelaniya"
                 className="relative w-full h-[360px] object-cover rounded-3xl shadow-2xl border border-emerald-100 transform group-hover:-translate-y-2 group-hover:scale-[1.01] transition-transform duration-500"
               />

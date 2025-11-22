@@ -59,7 +59,7 @@ const ProjectsPage = () => (
             {/* IMAGE */}
             <div className="rounded-xl overflow-hidden mb-4 shadow-md">
               <img
-                src="https://images.unsplash.com/photo-1526498460520-4c246339dccb"
+                src="auto-mobile.jpg"
                 className="w-full h-56 object-cover hover:scale-110 transition-transform duration-500"
                 alt="Electrical Training"
               />
@@ -90,7 +90,7 @@ const ProjectsPage = () => (
 
             <div className="rounded-xl overflow-hidden mb-4 shadow-md">
               <img
-                src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238"
+                src="smart-board.jpg"
                 className="w-full h-56 object-cover hover:scale-110 transition-transform duration-500"
                 alt="Smart Board Repair"
               />
@@ -142,7 +142,7 @@ const ProjectsPage = () => (
             <div className="bg-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-amber-500 h-full">
 
               <img
-                src="https://images.unsplash.com/photo-1602526218850-3f93e8f3114e"
+                src="bee-training.jpg"
                 className="rounded-xl mb-4 w-full h-56 object-cover hover:scale-110 transition-transform duration-500"
                 alt="Bee Training"
               />
@@ -162,7 +162,7 @@ const ProjectsPage = () => (
             <div className="bg-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-amber-500 h-full">
 
               <img
-                src="https://images.unsplash.com/photo-1567427013955-2b0b5da0923f"
+                src="financial.jpg"
                 className="rounded-xl mb-4 w-full h-56 object-cover hover:scale-110 transition-transform duration-500"
                 alt="Financial Empowerment"
               />
