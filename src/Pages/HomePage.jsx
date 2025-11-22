@@ -47,7 +47,9 @@ const HomePage = ({ navigateTo, toggleChat }) => (
             </button>
             <button
               onClick={() => navigateTo("about")}
-              className="px-8 py-4 rounded-full bg-white/10 backdrop-blur-md text-white border border-white/30 font-bold text-lg hover:bg-white hover:text-orange-900 transition-all hover:scale-105 transform"
+              className="px-8 py-4 rounded-full bg-[#111]
+/10 backdrop-blur-md text-white border border-white/30 font-bold text-lg hover:bg-[#111]
+ hover:text-orange-900 transition-all hover:scale-105 transform"
             >
               About The Project
             </button>
@@ -61,17 +63,19 @@ const HomePage = ({ navigateTo, toggleChat }) => (
     </section>
 
     {/* Intro Section (Preview) */}
-    <section id="about-preview" className="py-20 bg-white">
+    <section id="about-preview" className="py-20 bg-[#111]
+">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <FadeIn>
             <h2 className="text-orange-600 font-bold tracking-wide text-sm uppercase mb-2">
               The Initiative
             </h2>
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-sans">
+            <h3 className="text-3xl md:text-4xl font-bold text-white
+ mb-6 font-sans">
               දිරිසවි 5.0 (Dirisavi)
             </h3>
-            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+            <p className="text-lg text-gray-100 mb-6 leading-relaxed">
               "Dirisavi" translates to "Strength and Courage." Our 5.0
               initiative marks the latest chapter led by the Poverty and Hunger
               Avenue of the Leo Club of University of Kelaniya.
@@ -83,16 +87,16 @@ const HomePage = ({ navigateTo, toggleChat }) => (
                 { label: "Club Members", val: "1,600+" }
               ].map((stat, i) => (
                 <div key={i}>
-                  <span className="block text-3xl font-bold text-orange-900">
+                  <span className="block text-3xl font-bold text-orange-500">
                     {stat.val}
                   </span>
-                  <span className="text-sm text-gray-500">{stat.label}</span>
+                  <span className="text-sm text-gray-300">{stat.label}</span>
                 </div>
               ))}
             </div>
             <button
               onClick={() => navigateTo("projects")}
-              className="mt-8 text-orange-600 font-bold hover:text-orange-800 flex items-center gap-2"
+              className="mt-8 text-orange-500 font-bold hover:text-orange-800 flex items-center gap-2"
             >
               View our projects <ArrowRight size={16} />
             </button>
@@ -117,7 +121,7 @@ const HomePage = ({ navigateTo, toggleChat }) => (
     </section>
 
     {/* Mission Banner */}
-    <section className="py-24 bg-orange-600 relative overflow-hidden">
+    <section className="py-24 bg-orange-800 relative overflow-hidden">
       <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#F59E0B_1px,transparent_1px)] [background-size:16px_16px]"></div>
       <div className="max-w-4xl mx-auto px-4 text-center relative z-10 text-white">
         <FadeIn>
@@ -132,13 +136,14 @@ const HomePage = ({ navigateTo, toggleChat }) => (
     </section>
 
 {/* Dirisavi 4.0 Photo Carousel */}
-<section className="py-16 bg-orange-50 overflow-hidden">
+<section className="py-16 bg-gray-800 overflow-hidden">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center">
     <FadeIn>
       <span className="text-orange-600 font-bold tracking-wide uppercase">
         Throwback — Dirisavi 4.0
       </span>
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
+      <h2 className="text-3xl md:text-4xl font-bold text-white
+ mt-2">
         Highlights From Last Year
       </h2>
     </FadeIn>
@@ -173,14 +178,15 @@ const HomePage = ({ navigateTo, toggleChat }) => (
 
 
     {/* Project Phases Summary */}
-    <section id="phases" className="py-24 bg-orange-50">
+    <section id="phases" className="py-24 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn>
           <div className="text-center mb-16">
             <span className="text-orange-600 font-bold tracking-wide uppercase">
               Our Strategy
             </span>
-            <h2 className="text-4xl font-bold text-gray-900 mt-2">
+            <h2 className="text-4xl font-bold text-white
+ mt-2">
               Two Pillars of Change
             </h2>
           </div>
@@ -189,14 +195,16 @@ const HomePage = ({ navigateTo, toggleChat }) => (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           {/* Phase 1 */}
           <FadeIn>
-            <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl hover:shadow-2xl transition-all duration-300 border-b-4 border-orange-600 group h-full flex flex-col">
+            <div className="bg-[#111]
+ rounded-3xl p-8 lg:p-12 shadow-xl hover:shadow-2xl transition-all duration-300 border-b-4 border-orange-600 group h-full flex flex-col">
               <div className="w-16 h-16 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-orange-600 group-hover:text-white transition-colors">
                 <Wrench size={32} />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <h3 className="text-2xl font-bold text-white
+ mb-4">
                 Phase I: Vocational Training
               </h3>
-              <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
+              <p className="text-gray-100 mb-6 leading-relaxed flex-grow">
                 Empowering A/L Vocational Stream students with practical
                 electrical workshops with collaboration of Technical college of Maradana, smart board repairs.
               </p>
@@ -211,14 +219,16 @@ const HomePage = ({ navigateTo, toggleChat }) => (
 
           {/* Phase 2 */}
           <FadeIn delay={200}>
-            <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl hover:shadow-2xl transition-all duration-300 border-b-4 border-amber-500 group h-full flex flex-col">
+            <div className="bg-[#111]
+ rounded-3xl p-8 lg:p-12 shadow-xl hover:shadow-2xl transition-all duration-300 border-b-4 border-amber-500 group h-full flex flex-col">
               <div className="w-16 h-16 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-amber-500 group-hover:text-white transition-colors">
                 <Bug size={32} />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <h3 className="text-2xl font-bold text-white
+ mb-4">
                 Phase II: Bee Honey Industry
               </h3>
-              <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
+              <p className="text-gray-100 mb-6 leading-relaxed flex-grow">
                 Uplifting low-income families through bee honey farming
                 training, equipment distribution, and financial empowerment
                 sessions with the Bank of Ceylon.

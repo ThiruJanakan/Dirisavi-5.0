@@ -25,15 +25,18 @@ export default function AdminLogin() {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-100 px-4">
-      <div className="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md border border-gray-200">
-        <h1 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+    <div className="flex items-center justify-center h-screen bg-[#111] px-4">
+      <div className="bg-[#111]
+ p-8 rounded-2xl shadow-xl w-full max-w-md border border-gray-200">
+        <h1 className="text-3xl font-bold text-white
+ mb-6 text-center">
           Admin Login
         </h1>
 
         <form onSubmit={handleLogin} className="space-y-5">
           <div>
-            <label className="font-semibold text-gray-700">Email</label>
+            <label className="font-semibold text-white
+">Email</label>
             <input
               type="email"
               className="w-full p-3 rounded-xl border border-gray-300 mt-1"
@@ -43,7 +46,8 @@ export default function AdminLogin() {
           </div>
 
           <div>
-            <label className="font-semibold text-gray-700">Password</label>
+            <label className="font-semibold text-white
+">Password</label>
             <input
               type="password"
               className="w-full p-3 rounded-xl border border-gray-300 mt-1"

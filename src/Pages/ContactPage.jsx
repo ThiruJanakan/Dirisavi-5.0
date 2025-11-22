@@ -45,7 +45,8 @@ export default function ContactPage() {
 
   // ---------------- PAGE UI ----------------
   return (
-    <div className="pt-24 pb-20 bg-white">
+    <div className="pt-24 pb-20 bg-[#111]
+">
       {/* Header */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <FadeIn>
@@ -53,10 +54,11 @@ export default function ContactPage() {
             <span className="text-orange-600 font-bold tracking-widest uppercase text-sm">
               Get in Touch
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white
+ mt-4 mb-6">
               Contact Dirisavi 5.0 Team
             </h1>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-xl text-gray-100 leading-relaxed">
               Partner with us or reach out to our dedicated committee members to
               make a difference.
             </p>
@@ -74,26 +76,27 @@ export default function ContactPage() {
 
     {/* Committee Members */}
     <div>
-      <h3 className="text-2xl font-bold text-gray-900 mb-8">
+      <h3 className="text-2xl font-bold text-white
+ mb-8">
         Project Committee
       </h3>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
 
         {[
-          { name: "Osanda Lakshan", role: "Co-Chair", phone: "076 144 6604", img: "/committee/osanda.jpg" },
-          { name: "Paboda Kausali", role: "Co-Chair", phone: "078 817 5271", img: "/committee/paboda.jpg" },
-          { name: "Madhushi Wathsala", role: "Co-Chair", phone: "075 422 6247", img: "/committee/madhushi.jpg" },
-          { name: "Janagan Thiruchelvam", role: "LB Lead", phone: "070 530 0007", img: "/committee/janagan.jpg" },
-          { name: "Nimesha Herath", role: "Co-Director", phone: "076 774 3665", img: "/committee/nimesha.jpg" },
-          { name: "Minoja Weerasinghe", role: "Co-Director", phone: "074 023 5792", img: "/committee/minoja.jpg" },
+          { name: "Osanda Lakshan", role: "Co-Chair", phone: "076 144 6604", img: "/images/osanda.jpg" },
+          { name: "Paboda Kausali", role: "Co-Chair", phone: "078 817 5271", img: "/images/paboda.jpg" },
+          { name: "Madhushi Wathsala", role: "Co-Chair", phone: "075 422 6247", img: "/images/madhushi.jpg" },
+          { name: "Janagan Thiruchelvam", role: "LB Lead", phone: "070 530 0007", img: "/images/janagan.jpg" },
+          { name: "Nimesha Herath", role: "Co-Director", phone: "076 774 3665", img: "/images/nimesha.jpg" },
+          { name: "Minoja Weerasinghe", role: "Co-Director", phone: "074 023 5792", img: "/images/minoja.jpg" },
         ].map((member, i) => (
           <div
             key={i}
             className="
-              group bg-orange-50 p-4 rounded-xl border border-orange-200 
+              group bg-gray-800 p-4 rounded-xl border border-orange-200 
               shadow-sm hover:shadow-xl transition-all duration-300 
-              hover:-translate-y-2 relative overflow-hidden
+              hover:-translate-y-5 relative overflow-hidden
             "
           >
             {/* Glow effect */}
@@ -106,10 +109,10 @@ export default function ContactPage() {
             />
 
             {/* Content */}
-            <div className="relative z-10">
+            <div className="relative z-10 text-center">
 
               {/* Photo */}
-              <div className="w-20 h-20 rounded-xl overflow-hidden shadow-md border border-orange-100 mb-3">
+              <div className="w-40 h-40 rounded-xl overflow-hidden shadow-md border border-orange-100 mb-3 align-center mx-auto">
                 <img
                   src={member.img}
                   alt={member.name}
@@ -117,9 +120,10 @@ export default function ContactPage() {
                 />
               </div>
 
-              <h4 className="font-bold text-gray-900">{member.name}</h4>
+              <h4 className="font-bold text-white
+">{member.name}</h4>
               <p className="text-orange-600 text-sm font-bold">{member.role}</p>
-              <p className="text-gray-600 text-sm mt-1">{member.phone}</p>
+              <p className="text-gray-100 text-sm mt-1">{member.phone}</p>
             </div>
           </div>
         ))}
@@ -140,20 +144,22 @@ export default function ContactPage() {
   height="100%"
   style={{ border: 0 }}
   allowFullScreen=""
-  loading="lazy"
+  loading="fast"
   title="University of Kelaniya"
 />
 
         </div>
       </div>
     {/* Email Card */}
-        <div className="flex items-start gap-4 bg-gray-50 p-6 rounded-2xl border border-gray-100">
-          <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-orange-600 shrink-0 shadow-sm">
+        <div className="flex items-start gap-4 bg-gray-900 p-6 rounded-2xl border border-gray-100">
+          <div className="w-12 h-12 bg-[#111]
+ rounded-full flex items-center justify-center text-orange-600 shrink-0 shadow-sm">
             <Mail size={24} />
           </div>
           <div>
-            <h4 className="font-bold text-gray-900 text-lg">Email Us</h4>
-            <p className="text-gray-600 mt-1">
+            <h4 className="font-bold text-white
+ text-lg">Email Us</h4>
+            <p className="text-gray-100 mt-1">
               <a
                 href="mailto:povertyandhunger2025@gmail.com"
                 className="hover:text-orange-600 transition-colors font-semibold"
@@ -165,13 +171,15 @@ export default function ContactPage() {
         </div>
 
         {/* WhatsApp Card */}
-        <div className="flex items-start gap-4 bg-gray-50 p-6 rounded-2xl border border-gray-100">
-      <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-green-600 shadow-sm">
+        <div className="flex items-start gap-4 bg-gray-900 p-6 rounded-2xl border border-gray-100">
+      <div className="w-12 h-12 bg-[#111]
+ rounded-full flex items-center justify-center text-green-600 shadow-sm">
         <MessageCircle size={24} />
       </div>
       <div>
-        <h4 className="font-bold text-gray-900 text-lg">WhatsApp Us</h4>
-        <p className="text-gray-600 mt-1 font-semibold">
+        <h4 className="font-bold text-white
+ text-lg">WhatsApp Us</h4>
+        <p className="text-gray-100 mt-1 font-semibold">
           <a href="https://wa.me/94767743665" className="hover:text-green-600">
             +94 76 774 3665
           </a>
@@ -181,13 +189,15 @@ export default function ContactPage() {
 
     {/* RIGHT SIDE — PARTNERSHIP INQUIRY FORM (Matches screenshot perfectly) */}
     <FadeIn>
-      <div className="bg-white p-10 rounded-3xl shadow-xl border border-gray-100">
+      <div className="bg-[#111]
+ p-10 rounded-3xl shadow-xl border border-gray-100">
 
         <h1 className="text-center text-4xl font-bold text-green-800 mb-3">
           Partnership Inquiry
         </h1>
 
-        <p className="text-center text-gray-700 mb-10 text-lg">
+        <p className="text-center text-white
+ mb-10 text-lg">
           Interested in partnering with us? Fill out the form below.
         </p>
 
@@ -197,61 +207,71 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
             <div>
-              <label className="block text-gray-800 font-semibold mb-2">
+              <label className="block text-white
+ font-semibold mb-2">
                 Organization Name
               </label>
               <input
                 name="organizationName"
                 type="text"
                 required
-                className="w-full px-4 py-3 rounded-md border bg-white shadow-sm focus:ring-2 focus:ring-green-800"
+                className="w-full px-4 py-3 rounded-md border bg-[#111]
+ shadow-sm focus:ring-2 focus:ring-green-800"
               />
             </div>
 
             <div>
-              <label className="block text-gray-800 font-semibold mb-2">
+              <label className="block text-white
+ font-semibold mb-2">
                 Contact Person
               </label>
               <input
                 name="contactPerson"
                 type="text"
                 required
-                className="w-full px-4 py-3 rounded-md border bg-white shadow-sm focus:ring-2 focus:ring-green-800"
+                className="w-full px-4 py-3 rounded-md border bg-[#111]
+ shadow-sm focus:ring-2 focus:ring-green-800"
               />
             </div>
 
             <div>
-              <label className="block text-gray-800 font-semibold mb-2">
+              <label className="block text-white
+ font-semibold mb-2">
                 Email Address
               </label>
               <input
                 name="email"
                 type="email"
                 required
-                className="w-full px-4 py-3 rounded-md border bg-white shadow-sm focus:ring-2 focus:ring-green-800"
+                className="w-full px-4 py-3 rounded-md border bg-[#111]
+ shadow-sm focus:ring-2 focus:ring-green-800"
               />
             </div>
 
             <div>
-              <label className="block text-gray-800 font-semibold mb-2">
+              <label className="block text-white
+ font-semibold mb-2">
                 Phone Number
               </label>
               <input
                 name="phone"
                 type="tel"
                 required
-                className="w-full px-4 py-3 rounded-md border bg-white shadow-sm focus:ring-2 focus:ring-green-800"
+                className="w-full px-4 py-3 rounded-md border bg-[#111]
+ shadow-sm focus:ring-2 focus:ring-green-800"
               />
             </div>
 
             <div className="md:col-span-2">
-              <label className="block text-gray-800 font-semibold mb-2">
+              <label className="block text-white
+ font-semibold mb-2">
                 Partnership Package
               </label>
 
               <select
                 name="package"
-                className="w-full px-4 py-3 rounded-md border bg-white shadow-sm focus:ring-2 focus:ring-green-800"
+                className="w-full px-4 py-3 rounded-md border bg-[#111]
+ shadow-sm focus:ring-2 focus:ring-green-800"
                 required
               >
                 <option value="">Select a Package</option>
@@ -266,14 +286,16 @@ export default function ContactPage() {
             </div>
 
             <div className="md:col-span-2">
-              <label className="block text-gray-800 font-semibold mb-2">
+              <label className="block text-white
+ font-semibold mb-2">
                 Additional Information
               </label>
 
               <textarea
                 name="additionalInfo"
                 rows="5"
-                className="w-full px-4 py-3 rounded-md border bg-white shadow-sm focus:ring-2 focus:ring-green-800"
+                className="w-full px-4 py-3 rounded-md border bg-[#111]
+ shadow-sm focus:ring-2 focus:ring-green-800"
               ></textarea>
             </div>
           </div>
@@ -295,16 +317,17 @@ export default function ContactPage() {
 
     {/* ---------------- SUPPORT OUR CAUSE SECTION ---------------- */}
 { /* SUPPORT OUR CAUSE SECTION */}
-<section className="py-20 mt-10 bg-gradient-to-b from-orange-50 to-white">
+<section className="py-20 mt-10 bg-gradient-to-b from-orange-700 to-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
     {/* Heading */}
     <div className="text-center mb-16">
-      <h2 className="text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">
+      <h2 className="text-4xl font-extrabold text-white
+ mb-4 tracking-tight">
         Support Our Cause
       </h2>
-      <div className="w-20 h-1 bg-orange-600 mx-auto mb-6 rounded-full"></div>
-      <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+      <div className="w-20 h-1 bg-orange-100 mx-auto mb-6 rounded-full"></div>
+      <p className="text-lg text-gray-200 max-w-3xl mx-auto">
         Your contribution helps empower students and uplift rural families
         through sustainable development and skill-building.
       </p>
@@ -314,12 +337,15 @@ export default function ContactPage() {
       
       {/* YOUR IMPACT */}
       <div
-        className="bg-white p-10 rounded-2xl shadow-xl border border-orange-200 
+        className="bg-[#111]
+ p-10 rounded-2xl shadow-xl border border-orange-700 
         transform transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl hover:scale-[1.02]"
       >
-        <h3 className="text-2xl font-bold text-gray-900 mb-6">Your Impact</h3>
+        <h3 className="text-2xl font-bold text-white
+ mb-6">Your Impact</h3>
 
-        <ul className="space-y-5 text-gray-700">
+        <ul className="space-y-5 text-white
+">
           <li className="flex gap-3">
             <span className="text-green-500 text-xl">✔</span>
             <p><strong>Rs 5,000</strong> can help train <strong>5 students</strong> in Electrical & Smart Board Repair.</p>
@@ -349,7 +375,8 @@ export default function ContactPage() {
       >
         <h3 className="text-2xl font-bold mb-6 text-orange-400">How to Donate</h3>
 
-        <div className="bg-white/10 p-6 rounded-xl mb-6 backdrop-blur-sm">
+        <div className="bg-[#111]
+/10 p-6 rounded-xl mb-6 backdrop-blur-sm">
           <p className="mb-3"><strong className="text-orange-400">Bank:</strong> Bank of Ceylon (BOC)</p>
           <p className="mb-3"><strong className="text-orange-400">Account Name:</strong> T Janagan</p>
           <p className="mb-3"><strong className="text-orange-400">Account Number:</strong> 95514837</p>
