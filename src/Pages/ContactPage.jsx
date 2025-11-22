@@ -243,6 +243,90 @@ export default function ContactPage() {
   </div>
 </section>
 
+{/* SUPPORT OUR CAUSE SECTION */}
+<section className="py-20 mt-10 bg-gradient-to-b from-orange-50 to-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    {/* Heading */}
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">
+        Support Our Cause
+      </h2>
+      <div className="w-20 h-1 bg-orange-600 mx-auto mb-6 rounded-full"></div>
+      <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+        Your contribution helps empower students and uplift rural families
+        through sustainable development and skill-building.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      
+      {/* YOUR IMPACT */}
+      <div
+        className="bg-white p-10 rounded-2xl shadow-xl border border-orange-200 
+        transform transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl hover:scale-[1.02]"
+      >
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">Your Impact</h3>
+
+        <ul className="space-y-5 text-gray-700">
+          <li className="flex gap-3">
+            <span className="text-green-500 text-xl">✔</span>
+            <p><strong>Rs 5,000</strong> can help train <strong>5 students</strong> in Electrical & Smart Board Repair.</p>
+          </li>
+
+          <li className="flex gap-3">
+            <span className="text-green-500 text-xl">✔</span>
+            <p><strong>Rs 10,000</strong> can provide a <strong>bee hive kit</strong> for a farmer family.</p>
+          </li>
+
+          <li className="flex gap-3">
+            <span className="text-green-500 text-xl">✔</span>
+            <p><strong>Rs 25,000</strong> helps repair a <strong>smart board</strong> for a school classroom.</p>
+          </li>
+
+          <li className="flex gap-3">
+            <span className="text-green-500 text-xl">✔</span>
+            <p><strong>Rs 50,000</strong> supports a full <strong>farmer counselling & micro-finance program</strong>.</p>
+          </li>
+        </ul>
+      </div>
+
+      {/* HOW TO DONATE */}
+      <div
+        className="bg-gray-900 text-white p-10 rounded-2xl shadow-xl border border-gray-800
+        transform transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl hover:scale-[1.02]"
+      >
+        <h3 className="text-2xl font-bold mb-6 text-orange-400">How to Donate</h3>
+
+        <div className="bg-white/10 p-6 rounded-xl mb-6 backdrop-blur-sm">
+          <p className="mb-3"><strong className="text-orange-400">Bank:</strong> Bank of Ceylon (BOC)</p>
+          <p className="mb-3"><strong className="text-orange-400">Account Name:</strong> T Janagan</p>
+          <p className="mb-3"><strong className="text-orange-400">Account Number:</strong> 95514837</p>
+          <p className="mb-3"><strong className="text-orange-400">Branch:</strong> Dalugama</p>
+          <p><strong className="text-orange-400">Branch ID:</strong> 715</p>
+        </div>
+
+        <p className="text-gray-300 text-sm mt-3">
+          For assistance or alternative donation methods, contact us at:<br />
+          <a
+            href="mailto:povertyandhunger2025@gmail.com"
+            className="text-orange-400 hover:underline"
+          >
+            povertyandhunger2025@gmail.com
+          </a>{" "}
+          or call{" "}
+          <a
+            href="tel:+94767743665"
+            className="text-orange-400 hover:underline"
+          >
+            +94 76 774 3665
+          </a>.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* Support Section — unchanged */}
       {/* Keeping your existing UI here exactly the same */}
