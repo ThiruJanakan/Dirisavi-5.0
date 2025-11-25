@@ -149,7 +149,7 @@ const ProjectsPage = () => (
             <div className="bg-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-amber-500 h-full">
 
               <img
-                src="/images/bee-training.jpg"
+                src="/images/bee-training.webp"
                 className="rounded-xl mb-4 w-full h-56 object-cover hover:scale-110 transition-transform duration-500"
                 alt="Bee Training"
               />

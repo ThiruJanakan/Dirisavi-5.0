@@ -126,7 +126,7 @@ const AboutPage = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <FadeIn>
           <img
-            src="/images/dirisavi-legecy.jpg" 
+            src="/images/dirisavi-legacy.jpg" 
             alt="Sri Lankan Villagers"
             className="rounded-2xl shadow-2xl w-full h-[400px] object-cover transform hover:-translate-y-2 hover:shadow-[0_25px_60px_rgba(251,146,60,0.4)] transition-all duration-500"
           />
@@ -408,11 +408,11 @@ const AboutPage = () => (
         </div>
         <div className="relative group">
           {/* Replace with /public/dirisavi-oc-banner.jpg */}
-          <div className="absolute -inset-3 rounded-3xl bg-gradient-to-br from-orange-200 via-amber-100 to-white opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500" />
+          <div className="absolute -inset-5 rounded-3xl bg-gradient-to-br from-orange-200 via-amber-100 to-white opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500" />
           <img
-            src="/images/dirisavi-oc-banner.jpg"
+            src="/images/dirisavi-oc-banner.png"
             alt="Dirisavi 5.0 Organizing Committee"
-            className="relative w-full rounded-3xl shadow-xl border border-gray-100 object-cover max-h-[420px] mx-auto transform group-hover:-translate-y-2 group-hover:scale-[1.01] transition-transform duration-500"
+            className="relative w-full rounded-3xl shadow-xl border border-gray-100 object-cover max-h-[1350px] mx-auto transform group-hover:-translate-y-2 group-hover:scale-[1.01] transition-transform duration-500"
           />
         </div>
       </FadeIn>
@@ -438,7 +438,7 @@ const AboutPage = () => (
           <img
             src="/images/dirisavi-lb-banner.jpg"
             alt="Dirisavi 5.0 Leadership Body"
-            className="relative w-full rounded-3xl shadow-xl border border-gray-100 object-cover max-h-[420px] mx-auto transform group-hover:-translate-y-2 group-hover:scale-[1.01] transition-transform duration-500"
+            className="relative w-full rounded-3xl shadow-xl border border-gray-100 object-cover max-h-[1350px] mx-auto transform group-hover:-translate-y-2 group-hover:scale-[1.01] transition-transform duration-500"
           />
         </div>
       </FadeIn>

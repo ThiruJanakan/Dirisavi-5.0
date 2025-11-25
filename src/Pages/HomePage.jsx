@@ -152,12 +152,12 @@ const HomePage = ({ navigateTo, toggleChat }) => (
   <div className="relative w-full overflow-hidden">
     <div className="flex space-x-6 animate-swing-scroll">
       {[
-        "/images/4.0-1.jpg",
-        "/images/4.0-2.jpg",
-        "/images/4.0-3.jpg",
-        "/images/4.0-4.jpg",
-        "/images/4.0-5.jpg",
-        "/images/4.0-6.jpg"
+        "/images/4.0.1.jpg",
+        "/images/4.0.2.jpg",
+        "/images/4.0.3.jpg",
+        "/images/4.0.4.jpg",
+        "/images/4.0.5.jpg",
+        "/images/4.0.6.jpg"
       ].map((src, i) => (
         <div
           key={i}
