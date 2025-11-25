@@ -154,7 +154,7 @@ export default function App() {
   setChatInput("");
   setIsTyping(true);
 
-  const apiKey = "AIzaSyAlFIC8t7vI7OtySH2IVbV20EPOx3A-Gz0"; // replace with the new one
+  const apiKey = "apikey-here"; // replace with the new one
   
  
 
