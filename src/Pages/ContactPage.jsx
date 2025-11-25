@@ -187,130 +187,132 @@ export default function ContactPage() {
       </div>
     </div>
 
-    {/* RIGHT SIDE — PARTNERSHIP INQUIRY FORM (Matches screenshot perfectly) */}
     <FadeIn>
-      <div className="bg-[#111]
- p-10 rounded-3xl shadow-xl border border-gray-100">
+  {/* Partnership Form Wrapper with Background */}
+  <div className="relative rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
 
-        <h1 className="text-center text-4xl font-bold text-green-800 mb-3">
-          Partnership Inquiry
-        </h1>
+    {/* Background Image */}
+    <div
+      className="absolute inset-0 bg-cover bg-center"
+      style={{
+        backgroundImage: "url('/images/dirisavi-bg.jpg')" // your image
+      }}
+    ></div>
 
-        <p className="text-center text-white
- mb-10 text-lg">
-          Interested in partnering with us? Fill out the form below.
-        </p>
+    {/* Dark Overlay */}
+    <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
 
-        <form onSubmit={handlePartnershipSubmit} className="space-y-8">
+    {/* Actual Form Content */}
+    <div className="relative z-20 p-10">
 
-          {/* 2 Column Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <h1 className="text-center text-4xl font-bold text-green-800 mb-3">
+        Partnership Inquiry
+      </h1>
 
-            <div>
-              <label className="block text-white
- font-semibold mb-2">
-                Organization Name
-              </label>
-              <input
-                name="organizationName"
-                type="text"
-                required
-                className="w-full px-4 py-3 rounded-md border bg-[#111]
- shadow-sm focus:ring-2 focus:ring-green-800"
-              />
-            </div>
+      <p className="text-center text-white mb-10 text-lg">
+        Interested in partnering with us? Fill out the form below.
+      </p>
 
-            <div>
-              <label className="block text-white
- font-semibold mb-2">
-                Contact Person
-              </label>
-              <input
-                name="contactPerson"
-                type="text"
-                required
-                className="w-full px-4 py-3 rounded-md border bg-[#111]
- shadow-sm focus:ring-2 focus:ring-green-800"
-              />
-            </div>
+      <form onSubmit={handlePartnershipSubmit} className="space-y-8">
 
-            <div>
-              <label className="block text-white
- font-semibold mb-2">
-                Email Address
-              </label>
-              <input
-                name="email"
-                type="email"
-                required
-                className="w-full px-4 py-3 rounded-md border bg-[#111]
- shadow-sm focus:ring-2 focus:ring-green-800"
-              />
-            </div>
+        {/* 2 Column Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
-            <div>
-              <label className="block text-white
- font-semibold mb-2">
-                Phone Number
-              </label>
-              <input
-                name="phone"
-                type="tel"
-                required
-                className="w-full px-4 py-3 rounded-md border bg-[#111]
- shadow-sm focus:ring-2 focus:ring-green-800"
-              />
-            </div>
-
-            <div className="md:col-span-2">
-              <label className="block text-white
- font-semibold mb-2">
-                Partnership Package
-              </label>
-
-              <select
-                name="package"
-                className="w-full px-4 py-3 rounded-md border bg-[#111]
- shadow-sm focus:ring-2 focus:ring-green-800"
-                required
-              >
-                <option value="">Select a Package</option>
-                <option value="platinum">Platinum Partner</option>
-                <option value="gold">Gold Partner</option>
-                <option value="silver">Silver Partner</option>
-                <option value="bronze">Bronze Partner</option>
-                <option value="knowledge">Knowledge Partner</option>
-                <option value="printing">Printing Partner</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-
-            <div className="md:col-span-2">
-              <label className="block text-white
- font-semibold mb-2">
-                Additional Information
-              </label>
-
-              <textarea
-                name="additionalInfo"
-                rows="5"
-                className="w-full px-4 py-3 rounded-md border bg-[#111]
- shadow-sm focus:ring-2 focus:ring-green-800"
-              ></textarea>
-            </div>
+          <div>
+            <label className="block text-white font-semibold mb-2">
+              Organization Name
+            </label>
+            <input
+              name="organizationName"
+              type="text"
+              required
+              className="w-full px-4 py-3 rounded-md border bg-[#111] shadow-sm focus:ring-2 focus:ring-green-800"
+            />
           </div>
 
-          <button
-            type="submit"
-            disabled={loadingPartnership}
-            className="px-10 py-3 bg-green-800 text-white text-lg font-semibold rounded-md shadow hover:bg-green-900 transition disabled:opacity-50"
-          >
-            {loadingPartnership ? "Sending..." : "Submit Inquiry"}
-          </button>
-        </form>
+          <div>
+            <label className="block text-white font-semibold mb-2">
+              Contact Person
+            </label>
+            <input
+              name="contactPerson"
+              type="text"
+              required
+              className="w-full px-4 py-3 rounded-md border bg-[#111] shadow-sm focus:ring-2 focus:ring-green-800"
+            />
+          </div>
 
-      </div>
-    </FadeIn>
+          <div>
+            <label className="block text-white font-semibold mb-2">
+              Email Address
+            </label>
+            <input
+              name="email"
+              type="email"
+              required
+              className="w-full px-4 py-3 rounded-md border bg-[#111] shadow-sm focus:ring-2 focus:ring-green-800"
+            />
+          </div>
+
+          <div>
+            <label className="block text-white font-semibold mb-2">
+              Phone Number
+            </label>
+            <input
+              name="phone"
+              type="tel"
+              required
+              className="w-full px-4 py-3 rounded-md border bg-[#111] shadow-sm focus:ring-2 focus:ring-green-800"
+            />
+          </div>
+
+          <div className="md:col-span-2">
+            <label className="block text-white font-semibold mb-2">
+              Partnership Package
+            </label>
+            <select
+              name="package"
+              required
+              className="w-full px-4 py-3 rounded-md border bg-[#111] shadow-sm focus:ring-2 focus:ring-green-800"
+            >
+              <option value="">Select a Package</option>
+              <option value="platinum">Platinum Partner</option>
+              <option value="gold">Gold Partner</option>
+              <option value="silver">Silver Partner</option>
+              <option value="bronze">Bronze Partner</option>
+              <option value="knowledge">Knowledge Partner</option>
+              <option value="printing">Printing Partner</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div className="md:col-span-2">
+            <label className="block text-white font-semibold mb-2">
+              Additional Information
+            </label>
+            <textarea
+              name="additionalInfo"
+              rows="5"
+              className="w-full px-4 py-3 rounded-md border bg-[#111] shadow-sm focus:ring-2 focus:ring-green-800"
+            ></textarea>
+          </div>
+
+        </div>
+
+        <button
+          type="submit"
+          disabled={loadingPartnership}
+          className="px-10 py-3 bg-green-800 text-white text-lg font-semibold rounded-md shadow hover:bg-green-900 transition disabled:opacity-50"
+        >
+          {loadingPartnership ? "Sending..." : "Submit Inquiry"}
+        </button>
+      </form>
+
+    </div> {/* <-- this closes the form container properly */}
+
+  </div>
+</FadeIn>
+
   
 
 </section>

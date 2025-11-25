@@ -10,12 +10,12 @@ const ProjectsPage = () => (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
       <FadeIn>
         <div className="text-center max-w-3xl mx-auto">
-          <span className="text-orange-600 font-bold tracking-widest uppercase text-sm">
-            Our Initiatives
-          </span>
+          <span className="text-orange-600 font-bold uppercase text-2xl tracking-[0.10em]">
+  Our Initiatives
+           </span>
 
-          <h1 className="text-4xl md:text-5xl font-bold text-white
- mt-4">
+
+          <h1 className="text-4xl md:text-5xl font-bold text-white mt-4">
             Dirisavi 5.0 Projects
           </h1>
 
@@ -27,7 +27,7 @@ const ProjectsPage = () => (
 
       {/* ---------- PROJECT INTRO VIDEO ---------- */}
       <FadeIn delay={200}>
-        <div className="mt-12 flex justify-center">
+        <div className="mt-100 flex justify-center">
           <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200 w-full max-w-4xl">
             <video
               src="/videos/dirisavi-intro.mp4"   // ← Replace with your video path

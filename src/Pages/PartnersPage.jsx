@@ -8,6 +8,11 @@ import {
 } from "lucide-react";
 import FadeIn from "../Components/FadeIn";
 
+
+
+
+
+
 const PartnersPage = ({ navigateTo }) => {
   const packages = [
     {
@@ -73,6 +78,8 @@ const PartnersPage = ({ navigateTo }) => {
     }
   ];
 
+  
+
   const whyCards = [
     {
       icon: HandHeart,
@@ -97,11 +104,122 @@ const PartnersPage = ({ navigateTo }) => {
   return (
     <div className="pt-24 pb-20 bg-[#111] text-white">
 
+      
+
+
+
+      {/* =========================
+    ROLLING PARTNERSHIP CARDS
+   ========================= */}
+<section className="py-10 bg-[#F4B315]">
+  <div className="max-w-7xl mx-auto px-4 sm:px-10 lg:px-20">
+    <h2 className="text-5xl font-bold text-center text-white mb-10">
+      Official Partners of Dirisavi 5.0
+    </h2>
+
+    <div className="overflow-hidden">
+      <div className="partner-slider">
+
+        {[
+          { img: "/images/p1.jpg", link: "https://partner1.com" },
+          { img: "/images/p1.jpg", link: "https://partner2.com" },
+          { img: "/images/p1.jpg", link: "https://partner3.com" },
+          { img: "/images/p1.jpg", link: "https://partner4.com" },
+          { img: "/images/p1.jpg", link: "https://partner5.com" },
+          { img: "/images/p1.jpg", link: "https://partner6.com" },
+        ]
+          // Duplicate for smooth infinite scroll
+          .concat([
+            { img: "/images/p1.jpg", link: "https://partner1.com" },
+            { img: "/images/p1.jpg", link: "https://partner2.com" },
+          ])
+          .map((p, i) => (
+            <a
+              key={i}
+              href={p.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                min-w-[280px] h-[180px] bg-white rounded-2xl shadow-xl 
+                flex items-center justify-center
+                hover:scale-105 hover:rotate-1 transition-all duration-600
+              "
+            >
+              <img
+  src={p.img}
+  alt="partner logo"
+  className="max-w-[280px] max-h-[180px] object-contain"
+/>
+
+            </a>
+          ))}
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+
+  
+  </br>
+
+  <br>
+    
+  
+    
+    
+    </br>
+{/* FLOATING PDF BUTTON - FLOATS INSIDE SECTION */}
+<div className="relative h-0">
+  <a
+    href="https://drive.google.com/file/d/1XnK6P9LQpl9MwlvLhwp0QzrPIDPX75_c/view?usp=drivesdk"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      absolute
+      -top-6
+      right-10
+      group
+      bg-gradient-to-r from-orange-600 to-amber-500
+      text-white font-bold
+      px-6 py-4
+      rounded-full
+      shadow-[0_10px_30px_rgba(255,125,0,0.4)]
+      flex items-center gap-3
+      transition-all duration-300
+      hover:scale-110
+      hover:shadow-[0_15px_40px_rgba(255,150,0,0.5)]
+    "
+  >
+    {/* Glow Animation */}
+    <span className="
+      absolute inset-0 rounded-full
+      bg-gradient-to-r from-orange-200 to-yellow-200
+      opacity-0 group-hover:opacity-30
+      blur-xl transition duration-500
+    "></span>
+
+    {/* Button Content */}
+    <span className="relative z-10 flex items-center gap-2">
+      View Proposal PDF
+      <svg 
+        className="w-5 h-5 transform group-hover:translate-x-1 transition-all duration-300" 
+        fill="none" 
+        stroke="currentColor" 
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+      </svg>
+    </span>
+  </a>
+</div>
+
+
       {/* Header */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <FadeIn>
           <div className="text-center max-w-3xl mx-auto">
-            <span className="text-orange-600 font-bold tracking-widest uppercase text-sm">
+            <span className="text-orange-600 font-bold tracking-widest uppercase text-xl">
               Join Our Mission
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mt-4 mb-4">
@@ -109,7 +227,7 @@ const PartnersPage = ({ navigateTo }) => {
             </h1>
             <p className="text-lg md:text-xl text-gray-400 leading-relaxed">
               Together, we empower A/L students, uplift bee-honey farmers and fight poverty & hunger.
-              All sponsorship packages are **negotiable** — we can fully tailor custom benefits based on your brand goals.
+              All sponsorship packages are "negotiable", we can fully tailor custom benefits based on your brand goals.
             </p>
           </div>
         </FadeIn>
@@ -149,6 +267,8 @@ const PartnersPage = ({ navigateTo }) => {
           ))}
         </div>
       </section>
+
+
 
       {/* Sponsorship Packages */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">

@@ -106,10 +106,10 @@ Why Partner With Us?
 - Measurable outcomes and transparent reporting  
 
 Monetary Partnership Packages:
-Platinum Partner – Rs. 200,000  
-Gold Partner – Rs. 150,000  
-Silver Partner – Rs. 100,000  
-Bronze Partner – Rs. 75,000  
+Platinum Partner  Rs. 200,000  
+Gold Partner  Rs. 150,000  
+Silver Partner  Rs. 100,000  
+Bronze Partner  Rs. 75,000  
 
 All packages are negotiable and customizable.
 

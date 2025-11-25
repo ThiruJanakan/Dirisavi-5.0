@@ -6,6 +6,8 @@ import AdminDashboard from "./Pages/AdminDashboard";
 import AdminLogin from "./Pages/Adminlogin";
 import { db } from "./firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { Mail } from "lucide-react";
+
 
 import {
   Menu,
@@ -19,6 +21,8 @@ import {
   Loader2,
   Send
 } from "lucide-react";
+
+
 
 import {
   Routes,
@@ -35,6 +39,20 @@ import AboutPage from "./Pages/AboutPage";
 import ProjectsPage from "./Pages/ProjectsPage";
 import PartnersPage from "./Pages/PartnersPage";
 import ContactPage from "./Pages/ContactPage.jsx";
+
+const TikTokIcon = ({ size = 18, className = "" }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    fill="currentColor"
+    viewBox="0 0 24 24"
+    className={className}
+  >
+    <path d="M12.75 2h3.056c.21 1.48 1.322 3.078 3.194 3.219v3.018c-1.32.124-2.51-.29-3.64-.967v6.33c0 5.01-5.43 7.3-8.88 4.01-2.35-2.21-2.21-6.02.29-8.11 1.07-.87 2.39-1.33 3.75-1.33.35 0 .7.03 1.04.1v3.19c-.66-.2-1.41-.12-2.03.25-1.37.8-1.48 2.78-.21 3.7 1.32 1 3.29.39 3.54-1.33.05-.31.08-.63.08-.95V2z"/>
+  </svg>
+);
+
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -237,15 +255,19 @@ Rules:
               className="flex items-center gap-2 cursor-pointer"
               onClick={() => handleNavClick("/")}
             >
-              <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-amber-500 rounded-lg flex items-center justify-center text-white shadow-lg shadow-orange-500/40">
-                <HandHeart size={24} />
+              <div className="w-10 h-10 bg-gradient-to-br from-orange-20 to-amber-1000 rounded-lg flex items-center justify-center text-white shadow-lg shadow-orange-100/40">
+                 <img
+              src="/images/logo.jpg" 
+              alt="Dirisavi 5.0 project visual"
+              className="relative w-full h-[50px] md:h-[50px] object-cover rounded-3xl shadow-2xl border border-orange-100 transform group-hover:-translate-y-2 group-hover:rotate-1 transition-transform duration-500"
+            />
               </div>
               <div className="flex flex-col">
                 <span className="font-bold text-white text-lg leading-none tracking-tight">
                   දිරිසවි 5.0
                 </span>
-                <span className="text-[10px] font-bold tracking-[0.2em] text-orange-400 uppercase">
-                  Dirisavi
+                <span className="text-[14px] font-bold tracking-[0.2em] text-orange-400 uppercase">
+                  Dirisavi 5.0
                 </span>
               </div>
             </div>
@@ -503,29 +525,47 @@ Rules:
                 Connect
               </h4>
               <div className="flex space-x-4 mb-3">
-                {[Instagram].map((Icon, i) => (
-                  <a
-                    key={i}
-                    href="https://www.instagram.com/leo_uok?igsh=YzdqOG1hbmEyaGRi"
-                    className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-orange-600 transition-colors text-white"
-                  >
-                    <Icon size={18} />
-                  </a>
-                ))}
-              </div>
-              <div className="flex space-x-4">
-                {[Facebook].map((Icon, i) => (
-                  <a
-                    key={i}
-                    href="https://www.facebook.com/share/17NAqwpFqv/"
-                    className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-orange-600 transition-colors text-white"
-                  >
-                    <Icon size={18} />
-                  </a>
-                ))}
-              </div>
+
+  {/* Instagram */}
+  <a
+    href="https://www.instagram.com/leo_uok?igsh=YzdqOG1hbmEyaGRi"
+    className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-orange-600 transition-colors text-white"
+  >
+    <Instagram size={18} />
+  </a>
+
+  {/* TikTok */}
+  <a
+    href="https://www.tiktok.com/@uok_leos?_r=1&_t=ZS-91h3OxhxlxN/" // add your real TikTok link
+    className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-orange-600 transition-colors text-white"
+  >
+    <TikTokIcon size={18} />
+  </a>
+
+</div>
+
+<div className="flex space-x-4">
+
+  {/* Facebook */}
+  <a
+    href="https://www.facebook.com/share/17NAqwpFqv/"
+    className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-orange-600 transition-colors text-white"
+  >
+    <Facebook size={18} />
+  </a>
+
+  {/* Gmail */}
+  <a
+    href="mailto:leouok306b2@gmail.com"
+    className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-orange-600 transition-colors text-white"
+  >
+    <Mail size={18} />
+  </a>
+
+</div>
+
               <p className="mt-4 text-gray-500 text-sm">
-                University of Kelaniya,
+                Leo club of University of Kelaniya,
                 <br />
                 Sri Lanka
               </p>
