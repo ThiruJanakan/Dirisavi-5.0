@@ -154,7 +154,7 @@ export default function App() {
   setChatInput("");
   setIsTyping(true);
 
-  const apiKey = "apikey-here"; // replace with the new one
+  const apiKey = "process.env.GEMINI_API_KEY"; // replace with the new one
   
  
 
