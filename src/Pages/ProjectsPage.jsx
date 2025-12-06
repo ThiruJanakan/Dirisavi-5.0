@@ -11,8 +11,8 @@ const ProjectsPage = () => (
       <FadeIn>
         <div className="text-center max-w-3xl mx-auto">
           <span className="text-orange-600 font-bold uppercase text-2xl tracking-[0.10em]">
-  Our Initiatives
-           </span>
+            Our Initiatives
+          </span>
 
 
           <h1 className="text-4xl md:text-5xl font-bold text-white mt-4">
@@ -29,10 +29,12 @@ const ProjectsPage = () => (
       <FadeIn delay={200}>
         <div className="mt-100 flex justify-center">
           <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200 w-full max-w-4xl">
-            <video
-              src="/videos/dirisavi-intro.mp4"   // ← Replace with your video path
-              controls
-              className="w-full h-auto"
+            <iframe
+              src="https://play.gumlet.io/embed/693473b503bcee22ddd4510f?autoplay=1"
+              className="w-full aspect-video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title="Dirisavi 5.0 Project Video"
             />
           </div>
         </div>
