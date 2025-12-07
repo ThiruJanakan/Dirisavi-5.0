@@ -242,11 +242,11 @@ const HomePage = ({ navigateTo = () => { }, toggleChat = () => { } }) => {
                 <BounceCards
                   className="custom-bounceCards"
                   images={[
-                    "/images/4.1.1.jpg",
-                    "/images/4.1.2.jpg",
-                    "/images/4.1.3.jpg",
-                    "/images/4.1.4.jpg",
-                    "/images/4.1.5.jpg"
+                    "https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/4.1.4.jpg",
+                    "https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/4.1.3.jpg",
+                    "https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/4.1.5.jpg",
+                    "https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/4.0.6.jpg",
+                    "https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/4.1.2.jpg"
                   ]}
                   containerWidth={550}
                   containerHeight={300}
@@ -401,12 +401,12 @@ const HomePage = ({ navigateTo = () => { }, toggleChat = () => { } }) => {
             {[...Array(2)].map((_, setIndex) => (
               <React.Fragment key={setIndex}>
                 {[
-                  "/images/4.0.1.jpg",
-                  "/images/4.0.2.jpg",
-                  "/images/4.0.3.jpg",
-                  "/images/4.0.4.jpg",
-                  "/images/4.0.5.jpg",
-                  "/images/4.0.6.jpg"
+                  "https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/4.0.1.jpg",
+                  "https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/4.0.5.jpg",
+                  "https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/4.1.1.jpg",
+                  "https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/4.0.2.jpg",
+                  "https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/4.0.3.jpg",
+                  "https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/4.1.4.jpg"
                 ].map((src, i) => (
                   <div
                     key={`${setIndex} -${i} `}

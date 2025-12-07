@@ -78,7 +78,7 @@ const PartnersPage = ({ navigateTo }) => {
     }
   ];
 
-  
+
 
   const whyCards = [
     {
@@ -104,77 +104,77 @@ const PartnersPage = ({ navigateTo }) => {
   return (
     <div className="pt-24 pb-20 bg-[#111] text-white">
 
-      
+
 
 
 
       {/* =========================
     ROLLING PARTNERSHIP CARDS
    ========================= */}
-<section className="py-10 bg-[#F4B315]">
-  <div className="max-w-7xl mx-auto px-4 sm:px-10 lg:px-20">
-    <h2 className="text-5xl font-bold text-center text-white mb-10">
-      Official Partners of Dirisavi 5.0
-    </h2>
+      <section className="py-10 bg-[#F4B315]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-10 lg:px-20">
+          <h2 className="text-5xl font-bold text-center text-white mb-10">
+            Official Partners of Dirisavi 5.0
+          </h2>
 
-    <div className="overflow-hidden">
-      <div className="partner-slider">
+          <div className="overflow-hidden">
+            <div className="partner-slider">
 
-        {[
-          { img: "/images/p1.jpg", link: "https://partner1.com" },
-          { img: "/images/p1.jpg", link: "https://partner2.com" },
-          { img: "/images/p1.jpg", link: "https://partner3.com" },
-          { img: "/images/p1.jpg", link: "https://partner4.com" },
-          { img: "/images/p1.jpg", link: "https://partner5.com" },
-          { img: "/images/p1.jpg", link: "https://partner6.com" },
-        ]
-          // Duplicate for smooth infinite scroll
-          .concat([
-            { img: "/images/p1.jpg", link: "https://partner1.com" },
-            { img: "/images/p1.jpg", link: "https://partner2.com" },
-          ])
-          .map((p, i) => (
-            <a
-              key={i}
-              href={p.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
+              {[
+                { img: "/images/p1.jpg", link: "https://partner1.com" },
+                { img: "/images/p1.jpg", link: "https://partner2.com" },
+                { img: "/images/p1.jpg", link: "https://partner3.com" },
+                { img: "/images/p1.jpg", link: "https://partner4.com" },
+                { img: "/images/p1.jpg", link: "https://partner5.com" },
+                { img: "/images/p1.jpg", link: "https://partner6.com" },
+              ]
+                // Duplicate for smooth infinite scroll
+                .concat([
+                  { img: "/images/p1.jpg", link: "https://partner1.com" },
+                  { img: "/images/p1.jpg", link: "https://partner2.com" },
+                ])
+                .map((p, i) => (
+                  <a
+                    key={i}
+                    href={p.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="
                 min-w-[280px] h-[180px] bg-white rounded-2xl shadow-xl 
                 flex items-center justify-center
                 hover:scale-105 hover:rotate-1 transition-all duration-600
               "
-            >
-              <img
-  src={p.img}
-  alt="partner logo"
-  className="max-w-[280px] max-h-[180px] object-contain"
-/>
+                  >
+                    <img
+                      src={p.img}
+                      alt="partner logo"
+                      className="max-w-[280px] max-h-[180px] object-contain"
+                    />
 
-            </a>
-          ))}
-      </div>
-    </div>
-  </div>
-</section>
-<br>
+                  </a>
+                ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      <br>
 
-  
-  </br>
 
-  <br>
-    
-  
-    
-    
-    </br>
-{/* FLOATING PDF BUTTON - FLOATS INSIDE SECTION */}
-<div className="relative h-0">
-  <a
-    href="https://drive.google.com/file/d/1XnK6P9LQpl9MwlvLhwp0QzrPIDPX75_c/view?usp=drivesdk"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="
+      </br>
+
+      <br>
+
+
+
+
+      </br>
+      {/* FLOATING PDF BUTTON - FLOATS INSIDE SECTION */}
+      <div className="relative h-0">
+        <a
+          href="https://drive.google.com/file/d/1UPE8MpuXKtCThTC3amKcnI5UL5ZTKbo1/view?usp=drivesdk"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
       absolute
       -top-6
       right-10
@@ -189,30 +189,30 @@ const PartnersPage = ({ navigateTo }) => {
       hover:scale-110
       hover:shadow-[0_15px_40px_rgba(255,150,0,0.5)]
     "
-  >
-    {/* Glow Animation */}
-    <span className="
+        >
+          {/* Glow Animation */}
+          <span className="
       absolute inset-0 rounded-full
       bg-gradient-to-r from-orange-200 to-yellow-200
       opacity-0 group-hover:opacity-30
       blur-xl transition duration-500
     "></span>
 
-    {/* Button Content */}
-    <span className="relative z-10 flex items-center gap-2">
-      View Proposal PDF
-      <svg 
-        className="w-5 h-5 transform group-hover:translate-x-1 transition-all duration-300" 
-        fill="none" 
-        stroke="currentColor" 
-        strokeWidth="2"
-        viewBox="0 0 24 24"
-      >
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-      </svg>
-    </span>
-  </a>
-</div>
+          {/* Button Content */}
+          <span className="relative z-10 flex items-center gap-2">
+            View Proposal PDF
+            <svg
+              className="w-5 h-5 transform group-hover:translate-x-1 transition-all duration-300"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </span>
+        </a>
+      </div>
 
 
       {/* Header */}
@@ -342,7 +342,7 @@ const PartnersPage = ({ navigateTo }) => {
           </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[  
+            {[
               { title: "Knowledge Partner", desc: "Conduct mentoring, technical sessions or provide educational materials." },
               { title: "Printing Partner", desc: "Assist with printing booklets, certificates, and branding materials." },
               { title: "Beverage Partner", desc: "Provide refreshments for students, volunteers & trainers." },

@@ -49,7 +49,7 @@ const TikTokIcon = ({ size = 18, className = "" }) => (
     viewBox="0 0 24 24"
     className={className}
   >
-    <path d="M12.75 2h3.056c.21 1.48 1.322 3.078 3.194 3.219v3.018c-1.32.124-2.51-.29-3.64-.967v6.33c0 5.01-5.43 7.3-8.88 4.01-2.35-2.21-2.21-6.02.29-8.11 1.07-.87 2.39-1.33 3.75-1.33.35 0 .7.03 1.04.1v3.19c-.66-.2-1.41-.12-2.03.25-1.37.8-1.48 2.78-.21 3.7 1.32 1 3.29.39 3.54-1.33.05-.31.08-.63.08-.95V2z"/>
+    <path d="M12.75 2h3.056c.21 1.48 1.322 3.078 3.194 3.219v3.018c-1.32.124-2.51-.29-3.64-.967v6.33c0 5.01-5.43 7.3-8.88 4.01-2.35-2.21-2.21-6.02.29-8.11 1.07-.87 2.39-1.33 3.75-1.33.35 0 .7.03 1.04.1v3.19c-.66-.2-1.41-.12-2.03.25-1.37.8-1.48 2.78-.21 3.7 1.32 1 3.29.39 3.54-1.33.05-.31.08-.63.08-.95V2z" />
   </svg>
 );
 
@@ -147,18 +147,18 @@ export default function App() {
   };
 
   const handleSendMessage = async (textOverride = null) => {
-  const text = textOverride || chatInput.trim();
-  if (!text) return;
+    const text = textOverride || chatInput.trim();
+    if (!text) return;
 
-  setMessages(prev => [...prev, { role: "user", text }]);
-  setChatInput("");
-  setIsTyping(true);
+    setMessages(prev => [...prev, { role: "user", text }]);
+    setChatInput("");
+    setIsTyping(true);
 
-  const apiKey = "process.env.GEMINI_API_KEY"; // replace with the new one
-  
- 
+    const apiKey = "process.env.GEMINI_API_KEY"; // replace with the new one
 
-  const systemPrompt = `
+
+
+    const systemPrompt = `
 You are the AI Ambassador for "Dirisavi 5.0". 
 You MUST answer ONLY using the official project PDF content below.
 If the answer is NOT found in the PDF, say:
@@ -178,60 +178,60 @@ Rules:
 
 
 
-  try {
-    const response = await fetch("/api/gemini"
-      //`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`
-      ,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          contents: [
-            {
-              role: "user",
-              parts: [{ text }]
+    try {
+      const response = await fetch("/api/gemini"
+        //`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`
+        ,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            contents: [
+              {
+                role: "user",
+                parts: [{ text }]
+              }
+            ],
+            systemInstruction: {
+              role: "system",
+              parts: [{ text: systemPrompt }]
             }
-          ],
-          systemInstruction: {
-            role: "system",
-            parts: [{ text: systemPrompt }]
+          })
+        }
+      );
+
+      const data = await response.json();
+
+      if (data.error) {
+        console.error("Gemini error:", data.error);
+        setMessages(prev => [
+          ...prev,
+          {
+            role: "ai",
+            text: "I’m having trouble reaching the server. Please try again! 🙏"
           }
-        })
+        ]);
+      } else {
+        const aiText =
+          data.candidates?.[0]?.content?.parts?.[0]?.text ||
+          "I didn't quite get that — can you repeat?";
+
+        setMessages(prev => [...prev, { role: "ai", text: aiText }]);
       }
-    );
+    } catch (error) {
+      console.error("Network error:", error);
 
-    const data = await response.json();
-
-    if (data.error) {
-      console.error("Gemini error:", data.error);
       setMessages(prev => [
         ...prev,
         {
           role: "ai",
-          text: "I’m having trouble reaching the server. Please try again! 🙏"
+          text: "Network error. Please check your connection or try again later. 🙏"
         }
       ]);
-    } else {
-      const aiText =
-        data.candidates?.[0]?.content?.parts?.[0]?.text ||
-        "I didn't quite get that — can you repeat?";
-
-      setMessages(prev => [...prev, { role: "ai", text: aiText }]);
+    } finally {
+      setIsTyping(false);
     }
-  } catch (error) {
-    console.error("Network error:", error);
-
-    setMessages(prev => [
-      ...prev,
-      {
-        role: "ai",
-        text: "Network error. Please check your connection or try again later. 🙏"
-      }
-    ]);
-  } finally {
-    setIsTyping(false);
-  }
-};
+  };
 
 
   const path = location.pathname;
@@ -243,11 +243,10 @@ Rules:
     <div className="font-sans antialiased bg-gradient-to-b from-[#050509] via-[#050509] to-[#111827] text-gray-100 selection:bg-orange-600 selection:text-white relative min-h-screen flex flex-col">
       {/* --- Navigation --- */}
       <nav
-        className={`fixed w-full z-50 transition-all duration-300 ${
-          scrolled
+        className={`fixed w-full z-50 transition-all duration-300 ${scrolled
             ? "bg-black/90 shadow-xl backdrop-blur-md py-2"
             : "bg-black/60 backdrop-blur-md py-4"
-        }`}
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
@@ -257,11 +256,11 @@ Rules:
               onClick={() => handleNavClick("/")}
             >
               <div className="w-10 h-10 bg-gradient-to-br from-orange-20 to-amber-1000 rounded-lg flex items-center justify-center text-white shadow-lg shadow-orange-100/40">
-                 <img
-              src="/images/logo.jpg" 
-              alt="Dirisavi 5.0 project visual"
-              className="relative w-full h-[50px] md:h-[50px] object-cover rounded-3xl shadow-2xl border border-orange-100 transform group-hover:-translate-y-2 group-hover:rotate-1 transition-transform duration-500"
-            />
+                <img
+                  src="https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/logo.jpg"
+                  alt="Dirisavi 5.0 project visual"
+                  className="relative w-full h-[50px] md:h-[50px] object-cover rounded-3xl shadow-2xl border border-orange-100 transform group-hover:-translate-y-2 group-hover:rotate-1 transition-transform duration-500"
+                />
               </div>
               <div className="flex flex-col">
                 <span className="font-bold text-white text-lg leading-none tracking-tight">
@@ -285,11 +284,10 @@ Rules:
                 <button
                   key={route}
                   onClick={() => handleNavClick(route)}
-                  className={`font-medium transition-colors ${
-                    isActive(route)
+                  className={`font-medium transition-colors ${isActive(route)
                       ? "text-orange-400"
                       : "text-gray-300 hover:text-orange-300"
-                  }`}
+                    }`}
                 >
                   {label}
                 </button>
@@ -527,43 +525,43 @@ Rules:
               </h4>
               <div className="flex space-x-4 mb-3">
 
-  {/* Instagram */}
-  <a
-    href="https://www.instagram.com/leo_uok?igsh=YzdqOG1hbmEyaGRi"
-    className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-orange-600 transition-colors text-white"
-  >
-    <Instagram size={18} />
-  </a>
+                {/* Instagram */}
+                <a
+                  href="https://www.instagram.com/leo_uok?igsh=YzdqOG1hbmEyaGRi"
+                  className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-orange-600 transition-colors text-white"
+                >
+                  <Instagram size={18} />
+                </a>
 
-  {/* TikTok */}
-  <a
-    href="https://www.tiktok.com/@uok_leos?_r=1&_t=ZS-91h3OxhxlxN/" // add your real TikTok link
-    className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-orange-600 transition-colors text-white"
-  >
-    <TikTokIcon size={18} />
-  </a>
+                {/* TikTok */}
+                <a
+                  href="https://www.tiktok.com/@uok_leos?_r=1&_t=ZS-91h3OxhxlxN/" // add your real TikTok link
+                  className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-orange-600 transition-colors text-white"
+                >
+                  <TikTokIcon size={18} />
+                </a>
 
-</div>
+              </div>
 
-<div className="flex space-x-4">
+              <div className="flex space-x-4">
 
-  {/* Facebook */}
-  <a
-    href="https://www.facebook.com/share/17NAqwpFqv/"
-    className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-orange-600 transition-colors text-white"
-  >
-    <Facebook size={18} />
-  </a>
+                {/* Facebook */}
+                <a
+                  href="https://www.facebook.com/share/17NAqwpFqv/"
+                  className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-orange-600 transition-colors text-white"
+                >
+                  <Facebook size={18} />
+                </a>
 
-  {/* Gmail */}
-  <a
-    href="mailto:leouok306b2@gmail.com"
-    className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-orange-600 transition-colors text-white"
-  >
-    <Mail size={18} />
-  </a>
+                {/* Gmail */}
+                <a
+                  href="mailto:leouok306b2@gmail.com"
+                  className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-orange-600 transition-colors text-white"
+                >
+                  <Mail size={18} />
+                </a>
 
-</div>
+              </div>
 
               <p className="mt-4 text-gray-500 text-sm">
                 Leo club of University of Kelaniya,
@@ -582,9 +580,8 @@ Rules:
       <div className="fixed bottom-6 right-6 z-50">
         <button
           onClick={() => toggleChat()}
-          className={`group flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 text-white shadow-[0_0_30px_rgba(248,113,22,0.65)] hover:scale-110 transition-all duration-300 focus:outline-none ${
-            isChatOpen ? "rotate-90" : "rotate-0"
-          }`}
+          className={`group flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 text-white shadow-[0_0_30px_rgba(248,113,22,0.65)] hover:scale-110 transition-all duration-300 focus:outline-none ${isChatOpen ? "rotate-90" : "rotate-0"
+            }`}
         >
           {isChatOpen ? (
             <X size={28} />
@@ -599,9 +596,8 @@ Rules:
         </button>
 
         <div
-          className={`absolute bottom-20 right-0 w-[350px] md:w-[400px] h-[500px] bg-[#050509] rounded-2xl shadow-[0_0_40px_rgba(15,23,42,0.9)] flex flex-col border border-gray-800 transform transition-all duration-300 origin-bottom-right overflow-hidden ${
-            isChatOpen ? "scale-100 opacity-100" : "scale-0 opacity-0 pointer-events-none"
-          }`}
+          className={`absolute bottom-20 right-0 w-[350px] md:w-[400px] h-[500px] bg-[#050509] rounded-2xl shadow-[0_0_40px_rgba(15,23,42,0.9)] flex flex-col border border-gray-800 transform transition-all duration-300 origin-bottom-right overflow-hidden ${isChatOpen ? "scale-100 opacity-100" : "scale-0 opacity-0 pointer-events-none"
+            }`}
         >
           <div className="bg-gradient-to-r from-orange-500 to-amber-500 p-4 flex justify-between items-center shrink-0">
             <div className="flex items-center gap-3">
@@ -630,23 +626,20 @@ Rules:
             {messages.map((msg, idx) => (
               <div
                 key={idx}
-                className={`flex items-start gap-2.5 ${
-                  msg.role === "user" ? "flex-row-reverse" : ""
-                }`}
+                className={`flex items-start gap-2.5 ${msg.role === "user" ? "flex-row-reverse" : ""
+                  }`}
               >
                 <div
-                  className={`w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center text-white text-xs ${
-                    msg.role === "user" ? "bg-gray-500" : "bg-orange-600"
-                  }`}
+                  className={`w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center text-white text-xs ${msg.role === "user" ? "bg-gray-500" : "bg-orange-600"
+                    }`}
                 >
                   {msg.role === "user" ? <User size={14} /> : "AI"}
                 </div>
                 <div
-                  className={`p-3 rounded-2xl max-w-[85%] shadow-sm text-sm ${
-                    msg.role === "user"
+                  className={`p-3 rounded-2xl max-w-[85%] shadow-sm text-sm ${msg.role === "user"
                       ? "bg-orange-600 text-white rounded-tr-none"
                       : "bg-[#050509] text-gray-100 border border-gray-700 rounded-tl-none"
-                  }`}
+                    }`}
                 >
                   <MarkdownRenderer text={msg.text} />
                 </div>
