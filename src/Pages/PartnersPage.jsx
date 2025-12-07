@@ -121,12 +121,12 @@ const PartnersPage = ({ navigateTo }) => {
             <div className="partner-slider">
 
               {[
-                { img: "/images/p1.jpg", link: "https://partner1.com" },
-                { img: "/images/p1.jpg", link: "https://partner2.com" },
-                { img: "/images/p1.jpg", link: "https://partner3.com" },
-                { img: "/images/p1.jpg", link: "https://partner4.com" },
-                { img: "/images/p1.jpg", link: "https://partner5.com" },
-                { img: "/images/p1.jpg", link: "https://partner6.com" },
+                { img: "https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/p1.jpg", link: "https://partner1.com" },
+                { img: "https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/p1.jpg", link: "https://partner2.com" },
+                { img: "https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/p1.jpg", link: "https://partner3.com" },
+                { img: "https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/p1.jpg", link: "https://partner4.com" },
+                { img: "https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/p1.jpg", link: "https://partner5.com" },
+                { img: "https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/p1.jpg", link: "https://partner6.com" },
               ]
                 // Duplicate for smooth infinite scroll
                 .concat([

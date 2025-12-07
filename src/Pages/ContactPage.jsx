@@ -84,12 +84,12 @@ export default function ContactPage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
 
         {[
-          { name: "Osanda Lakshan", role: "Co-Chair", phone: "076 144 6604", img: "/images/osanda.jpg" },
-          { name: "Paboda Kausali", role: "Co-Chair", phone: "078 817 5271", img: "/images/paboda.jpg" },
-          { name: "Madhushi Wathsala", role: "Co-Chair", phone: "075 422 6247", img: "/images/madhushi.jpg" },
-          { name: "Janagan Thiruchelvam", role: "LB Lead", phone: "070 530 0007", img: "/images/janagan.jpg" },
-          { name: "Nimesha Herath", role: "Co-Director", phone: "076 774 3665", img: "/images/nimesha.jpg" },
-          { name: "Minoja Weerasinghe", role: "Co-Director", phone: "074 023 5792", img: "/images/minoja.jpg" },
+          { name: "Osanda Lakshan", role: "Co-Chair", phone: "076 144 6604", img: "https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/osanda.jpg" },
+          { name: "Paboda Kausali", role: "Co-Chair", phone: "078 817 5271", img: "https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/paboda.jpg" },
+          { name: "Madhushi Wathsala", role: "Co-Chair", phone: "075 422 6247", img: "https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/madhushi.jpg" },
+          { name: "Janagan Thiruchelvam", role: "LB Lead", phone: "070 530 0007", img: "https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/janagan.jpg" },
+          { name: "Nimesha Herath", role: "Co-Director", phone: "076 774 3665", img: "https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/nimesha.jpg" },
+          { name: "Minoja Weerasinghe", role: "Co-Director", phone: "074 023 5792", img: "https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/minoja.jpg" },
         ].map((member, i) => (
           <div
             key={i}

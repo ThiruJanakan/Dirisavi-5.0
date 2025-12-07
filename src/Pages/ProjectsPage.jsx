@@ -64,7 +64,7 @@ const ProjectsPage = () => (
             {/* IMAGE */}
             <div className="rounded-xl overflow-hidden mb-4 shadow-md">
               <img
-                src="/images/auto-mobile.jpg"
+                src="https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/auto-mobile.jpg"
                 className="w-full h-56 object-cover hover:scale-110 transition-transform duration-500"
                 alt="Electrical Training"
               />
@@ -96,7 +96,7 @@ const ProjectsPage = () => (
 
             <div className="rounded-xl overflow-hidden mb-4 shadow-md">
               <img
-                src="/images/smart-board.jpg"
+                src="https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/smart-board.jpg"
                 className="w-full h-56 object-cover hover:scale-110 transition-transform duration-500"
                 alt="Smart Board Repair"
               />
@@ -151,7 +151,7 @@ const ProjectsPage = () => (
             <div className="bg-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-amber-500 h-full">
 
               <img
-                src="/images/bee-training.webp"
+                src="https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/bee-training.webp"
                 className="rounded-xl mb-4 w-full h-56 object-cover hover:scale-110 transition-transform duration-500"
                 alt="Bee Training"
               />
@@ -171,7 +171,7 @@ const ProjectsPage = () => (
             <div className="bg-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-amber-500 h-full">
 
               <img
-                src="/images/financial.jpg"
+                src="https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/financial.jpg"
                 className="rounded-xl mb-4 w-full h-56 object-cover hover:scale-110 transition-transform duration-500"
                 alt="Financial Empowerment"
               />
