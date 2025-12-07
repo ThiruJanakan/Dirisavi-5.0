@@ -461,14 +461,11 @@ Rules:
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
             <div className="col-span-1 md:col-span-2">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="font-sans font-bold text-xl text-orange-500">
-                  Dirisavi 5.0
-                </span>
-                <span className="font-sans font-bold text-xl">
-                  | දිරිසවි 5.0
-                </span>
-              </div>
+              <img
+                src="https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/logo.jpg?updatedAt=1765074499706"
+                alt="Dirisavi 5.0 Logo"
+                className="h-20 w-auto mb-1"
+              />
               <p className="text-gray-400 leading-relaxed max-w-md">
                 Empowering rural Sri Lanka through sustainable development. A
                 non-profit initiative by Leo Club of University of Kelaniya.
