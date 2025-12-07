@@ -107,10 +107,9 @@ const HomePage = ({ navigateTo = () => { }, toggleChat = () => { } }) => {
       <section ref={targetRef} className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Parallax Background */}
         <motion.div style={{ y, opacity }} className="absolute inset-0 z-0">
-          <img src="/images/home-banner.jpg" // Ensure this path is valid
+          <img src="https://ik.imagekit.io/yiqhi8qnnw/Dirisavi/home-banner.jpg"
             alt="Sri Lankan Rural Life"
             className="w-full h-full object-cover object-center scale-110"
-            onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=2070&auto=format&fit=crop"; }} // Fallback image
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/40 backdrop-blur-[2px]"></div>
         </motion.div>

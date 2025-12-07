@@ -84,7 +84,7 @@ const AboutPage = () => (
             {/* Replace this image by adding /public/dirisavi-5-hero.jpg */}
             <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-orange-200 via-amber-100 to-white opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 pointer-events-none" />
             <img
-              src="/images/Dirisavi5.0-banner.png" 
+              src="/images/Dirisavi5.0-banner.png"
               alt="Dirisavi 5.0 project visual"
               className="relative w-full h-[360px] md:h-[420px] object-cover rounded-3xl shadow-2xl border border-orange-100 transform group-hover:-translate-y-2 group-hover:rotate-1 transition-transform duration-500"
             />
@@ -126,7 +126,7 @@ const AboutPage = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <FadeIn>
           <img
-            src="/images/dirisavi-legacy.jpg" 
+            src="/images/dirisavi-legacy-updated.png"
             alt="Sri Lankan Villagers"
             className="rounded-2xl shadow-2xl w-full h-[400px] object-cover transform hover:-translate-y-2 hover:shadow-[0_25px_60px_rgba(251,146,60,0.4)] transition-all duration-500"
           />
@@ -395,51 +395,51 @@ const AboutPage = () => (
     {/* =========================
     ORGANIZING COMMITTEE BANNER
    ========================= */}
-<section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-  <FadeIn>
-    <div className="text-center mb-6">
-      <h2 className="text-3xl font-bold text-white">Organizing Committee – Dirisavi 5.0</h2>
-      <p className="text-gray-500 mt-2">Dedicated hearts and minds behind the project.</p>
-    </div>
+    <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+      <FadeIn>
+        <div className="text-center mb-6">
+          <h2 className="text-3xl font-bold text-white">Organizing Committee – Dirisavi 5.0</h2>
+          <p className="text-gray-500 mt-2">Dedicated hearts and minds behind the project.</p>
+        </div>
 
-    <div className="relative group">
-      {/* Glow effect (reduced size) */}
-      <div className="absolute -inset-2 rounded-2xl bg-gradient-to-br from-orange-200 via-amber-100 to-white opacity-0 group-hover:opacity-100 blur-lg transition-opacity duration-500" />
+        <div className="relative group">
+          {/* Glow effect (reduced size) */}
+          <div className="absolute -inset-2 rounded-2xl bg-gradient-to-br from-orange-200 via-amber-100 to-white opacity-0 group-hover:opacity-100 blur-lg transition-opacity duration-500" />
 
-      {/* Image (reduced height + width scaled down) */}
-      <img
-        src="/images/dirisavi-oc-banner.png"
-        alt="Dirisavi 5.0 Organizing Committee"
-        className="relative w-[85%] max-h-[900px] rounded-2xl shadow-xl border border-gray-100 object-cover mx-auto transform group-hover:-translate-y-1 group-hover:scale-[1.005] transition-transform duration-500"
-      />
-    </div>
-  </FadeIn>
-</section>
+          {/* Image (reduced height + width scaled down) */}
+          <img
+            src="/images/dirisavi-oc-banner.png"
+            alt="Dirisavi 5.0 Organizing Committee"
+            className="relative w-[85%] max-h-[900px] rounded-2xl shadow-xl border border-gray-100 object-cover mx-auto transform group-hover:-translate-y-1 group-hover:scale-[1.005] transition-transform duration-500"
+          />
+        </div>
+      </FadeIn>
+    </section>
 
 
-   {/* =========================
+    {/* =========================
     LEADERSHIP BODY BANNER
    ========================= */}
-<section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
-  <FadeIn>
-    <div className="text-center mb-6">
-      <h2 className="text-3xl font-bold text-white">Leadership Body – Dirisavi 5.0</h2>
-      <p className="text-gray-500 mt-2">Guiding the vision, strategy and long-term impact.</p>
-    </div>
+    <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+      <FadeIn>
+        <div className="text-center mb-6">
+          <h2 className="text-3xl font-bold text-white">Leadership Body – Dirisavi 5.0</h2>
+          <p className="text-gray-500 mt-2">Guiding the vision, strategy and long-term impact.</p>
+        </div>
 
-    <div className="relative group">
-      {/* Glow effect (reduced size) */}
-      <div className="absolute -inset-2 rounded-2xl bg-gradient-to-tr from-emerald-200 via-white to-orange-100 opacity-0 group-hover:opacity-100 blur-lg transition-opacity duration-500" />
+        <div className="relative group">
+          {/* Glow effect (reduced size) */}
+          <div className="absolute -inset-2 rounded-2xl bg-gradient-to-tr from-emerald-200 via-white to-orange-100 opacity-0 group-hover:opacity-100 blur-lg transition-opacity duration-500" />
 
-      {/* Image (reduced height + width) */}
-      <img
-        src="/images/dirisavi-lb-banner.jpg"
-        alt="Dirisavi 5.0 Leadership Body"
-        className="relative w-[85%] max-h-[900px] rounded-2xl shadow-xl border border-gray-100 object-cover mx-auto transform group-hover:-translate-y-1 group-hover:scale-[1.005] transition-transform duration-500"
-      />
-    </div>
-  </FadeIn>
-</section>
+          {/* Image (reduced height + width) */}
+          <img
+            src="/images/dirisavi-lb-banner.jpg"
+            alt="Dirisavi 5.0 Leadership Body"
+            className="relative w-[85%] max-h-[900px] rounded-2xl shadow-xl border border-gray-100 object-cover mx-auto transform group-hover:-translate-y-1 group-hover:scale-[1.005] transition-transform duration-500"
+          />
+        </div>
+      </FadeIn>
+    </section>
 
   </div>
 );

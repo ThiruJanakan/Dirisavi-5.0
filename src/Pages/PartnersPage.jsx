@@ -17,7 +17,7 @@ const PartnersPage = ({ navigateTo }) => {
   const packages = [
     {
       name: "Platinum Partner",
-      price: "Rs 200,000/=",
+      price: "Rs 100,000/=",
       color: "bg-slate-900 text-white",
       border: "border-slate-600",
       benefits: [
@@ -35,7 +35,7 @@ const PartnersPage = ({ navigateTo }) => {
 
     {
       name: "Gold Partner",
-      price: "Rs 150,000/=",
+      price: "Rs 75,000/=",
       color: "bg-yellow-500 text-slate-900",
       border: "border-yellow-400",
       benefits: [
@@ -50,7 +50,7 @@ const PartnersPage = ({ navigateTo }) => {
 
     {
       name: "Silver Partner",
-      price: "Rs 100,000/=",
+      price: "Rs 50,000/=",
       color: "bg-gray-200 text-gray-900",   // FIXED HERE
       border: "border-gray-400",
       benefits: [
@@ -65,7 +65,7 @@ const PartnersPage = ({ navigateTo }) => {
 
     {
       name: "Bronze Partner",
-      price: "Rs 75,000/=",
+      price: "Rs 30,000/=",
       color: "bg-orange-700 text-white",
       border: "border-orange-600",
       benefits: [

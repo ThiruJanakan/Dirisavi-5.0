@@ -244,8 +244,8 @@ Rules:
       {/* --- Navigation --- */}
       <nav
         className={`fixed w-full z-50 transition-all duration-300 ${scrolled
-            ? "bg-black/90 shadow-xl backdrop-blur-md py-2"
-            : "bg-black/60 backdrop-blur-md py-4"
+          ? "bg-black/90 shadow-xl backdrop-blur-md py-2"
+          : "bg-black/60 backdrop-blur-md py-4"
           }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -285,8 +285,8 @@ Rules:
                   key={route}
                   onClick={() => handleNavClick(route)}
                   className={`font-medium transition-colors ${isActive(route)
-                      ? "text-orange-400"
-                      : "text-gray-300 hover:text-orange-300"
+                    ? "text-orange-400"
+                    : "text-gray-300 hover:text-orange-300"
                     }`}
                 >
                   {label}
@@ -462,9 +462,11 @@ Rules:
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center gap-2 mb-4">
-                <HandHeart className="text-orange-500" size={28} />
+                <span className="font-sans font-bold text-xl text-orange-500">
+                  Dirisavi 5.0
+                </span>
                 <span className="font-sans font-bold text-xl">
-                  දිරිසවි 5.0
+                  | දිරිසවි 5.0
                 </span>
               </div>
               <p className="text-gray-400 leading-relaxed max-w-md">
@@ -637,8 +639,8 @@ Rules:
                 </div>
                 <div
                   className={`p-3 rounded-2xl max-w-[85%] shadow-sm text-sm ${msg.role === "user"
-                      ? "bg-orange-600 text-white rounded-tr-none"
-                      : "bg-[#050509] text-gray-100 border border-gray-700 rounded-tl-none"
+                    ? "bg-orange-600 text-white rounded-tr-none"
+                    : "bg-[#050509] text-gray-100 border border-gray-700 rounded-tl-none"
                     }`}
                 >
                   <MarkdownRenderer text={msg.text} />
