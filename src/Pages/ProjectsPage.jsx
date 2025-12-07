@@ -30,7 +30,7 @@ const ProjectsPage = () => (
         <div className="mt-100 flex justify-center">
           <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200 w-full max-w-4xl">
             <iframe
-              src="https://play.gumlet.io/embed/693473b503bcee22ddd4510f?autoplay=1"
+              src="https://play.gumlet.io/embed/6934dc0b491e9c48bfbbcaa1?autoplay=1&muted=0"
               className="w-full aspect-video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
